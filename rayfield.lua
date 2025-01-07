@@ -3388,15 +3388,15 @@ function RayfieldLibrary:CreateWindow(Settings)
 	TweenService:Create(Topbar.Divider, TweenInfo.new(1, Enum.EasingStyle.Exponential), {Size = UDim2.new(1, 0, 0, 1)}):Play()
 	TweenService:Create(Topbar.Title, TweenInfo.new(0.6, Enum.EasingStyle.Exponential), {TextTransparency = 0}):Play()
 	task.wait(0.05)
-	TweenService:Create(Topbar.Search, TweenInfo.new(0.6, Enum.EasingStyle.Exponential), {ImageTransparency = 1}):Play()
+	TweenService:Create(Topbar.Search, TweenInfo.new(1, Enum.EasingStyle.Exponential), {ImageTransparency = 1}):Play()
 	task.wait(0.05)
 	if Topbar:FindFirstChild('Settings') then
-		TweenService:Create(Topbar.Settings, TweenInfo.new(0.6, Enum.EasingStyle.Exponential), {ImageTransparency = 1}):Play()
+		TweenService:Create(Topbar.Settings, TweenInfo.new(1, Enum.EasingStyle.Exponential), {ImageTransparency = 1}):Play()
 		task.wait(0.05)
 	end
-	TweenService:Create(Topbar.ChangeSize, TweenInfo.new(0.6, Enum.EasingStyle.Exponential), {ImageTransparency = 1}):Play()
+	TweenService:Create(Topbar.ChangeSize, TweenInfo.new(1, Enum.EasingStyle.Exponential), {ImageTransparency = 1}):Play()
 	task.wait(0.05)
-	TweenService:Create(Topbar.Hide, TweenInfo.new(0.6, Enum.EasingStyle.Exponential), {ImageTransparency = 1}):Play()
+	TweenService:Create(Topbar.Hide, TweenInfo.new(0.6, Enum.EasingStyle.Exponential), {ImageTransparency = 0.8}):Play()
 	task.wait(0.3)
 
 	if dragBar then
