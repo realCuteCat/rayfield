@@ -34,11 +34,6 @@ local settingsTable = {
 local HttpService = game:GetService("HttpService")
 local RunService = game:GetService("RunService")
 
-if Topbar:FindFirstChild('Settings') then
-    Topbar.Settings.Visible = false
-    Topbar.Divider.Visible = false
-end
-
 -- Environment Check
 local useStudio = RunService:IsStudio() or false
 
@@ -46,6 +41,8 @@ local settingsCreated = false
 local cachedSettings
 local prompt = useStudio and require(script.Parent.prompt) or loadstring(game:HttpGet('https://raw.githubusercontent.com/SiriusSoftwareLtd/Sirius/refs/heads/request/prompt.lua'))()
 local request = (syn and syn.request) or (fluxus and fluxus.request) or (http and http.request) or http_request or request
+
+
 
 local function loadSettings()
 	local file = nil
@@ -1521,7 +1518,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 	if dragBar then
 		dragBar.Visible = false
 		dragBarCosmetic.BackgroundTransparency = 1
-		dragBar.Visible = fa
+		dragBar.Visible = false
 	end
 
 	if Settings.Theme then
