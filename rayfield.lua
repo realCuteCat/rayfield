@@ -1518,7 +1518,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 	if dragBar then
 		dragBar.Visible = false
 		dragBarCosmetic.BackgroundTransparency = 1
-		dragBar.Visible = true
+		dragBar.Visible = false
 	end
 
 	if Settings.Theme then
