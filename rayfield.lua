@@ -1453,17 +1453,22 @@ end
 
 
 function RayfieldLibrary:CreateWindow(Settings)
-	if Rayfield:FindFirstChild('Loading') then
-		if getgenv and not getgenv().rayfieldCached then
-			Rayfield.Enabled = true
-			Rayfield.Loading.Visible = true
+    if Rayfield:FindFirstChild('Loading') then
+        if getgenv and not getgenv().rayfieldCached then
+            Rayfield.Enabled = true
+            Rayfield.Loading.Visible = true
 
-			task.wait(1.4)
-			Rayfield.Loading.Visible = false
-		end
-	end
+            task.wait(1.4)
+            Rayfield.Loading.Visible = false
+        end
+    end
 
-	if getgenv then getgenv().rayfieldCached = true end
+    if Main.Topbar:FindFirstChild('Settings') then
+        Main.Topbar.Settings.Visible = false
+        Main.Topbar.Divider.Visible = false
+    end
+
+    if getgenv then getgenv().rayfieldCached = true end
 
 	if not correctBuild and not Settings.DisableBuildWarnings then
 		task.delay(3, 
